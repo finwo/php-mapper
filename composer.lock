@@ -4,41 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bb9d19c6b24b01b715055cbaae36b3e8",
-    "content-hash": "ec924991e364ac79523877b013e94a30",
+    "hash": "9861fb0eb55236a5ccfb8df47c7c2529",
+    "content-hash": "c02048e5750bb7241a7b25fc16e54343",
     "packages": [
-        {
-            "name": "finwo/property-accessor",
-            "version": "v0.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/finwo/property-accessor.git",
-                "reference": "b87005786dbdd368628d586b9568db6e8aec11bc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/finwo/property-accessor/zipball/b87005786dbdd368628d586b9568db6e8aec11bc",
-                "reference": "b87005786dbdd368628d586b9568db6e8aec11bc",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Finwo\\PropertyAccessor\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Robin Bron",
-                    "email": "robin@finwo.nl"
-                }
-            ],
-            "time": "2016-05-12 11:49:48"
-        },
         {
             "name": "netresearch/jsonmapper",
             "version": "v1.1.0",
