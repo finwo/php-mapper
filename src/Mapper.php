@@ -25,11 +25,11 @@ class Mapper
 
     /**
      * @param object|string $objectOrString
-     * @param object        $targetObject
+     * @param object|array  $targetObject
      *
      * @return $this
      */
-    public function map($objectOrString, $targetObject)
+    public function map($objectOrString, &$targetObject = array())
     {
         // Initialize json-mapper
         static $mapper = null;
@@ -38,10 +38,18 @@ class Mapper
         }
 
         // Make the data usable
+        /** @var object|array $data */
         $data = $this->getDriverHandler()->deserialize($objectOrString);
 
-        // Map & bail
-        $mapper->map($data, $targetObject);
+        // Map into target
+        if (is_array($data)) {
+            $class = is_object($targetObject) ? get_class($targetObject) : is_array($targetObject) ? null : "$targetObject";
+            $targetObject = $mapper->mapArray($data, array(), $class);
+        } else {
+            $mapper->map($data, $targetObject);
+        }
+
+        // Bail before things get complicated
         return $this;
     }
 }
