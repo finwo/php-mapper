@@ -4,7 +4,7 @@
 
 ---
 
-Basically a serialization wrapper for [netresearch/json-mapper](https://github.com/netresearch/json-mapper.git).
+Basically a serialization wrapper for [netresearch/jsonmapper](https://github.com/cweiske/jsonmapper.git).
 
 ---
 
@@ -17,5 +17,8 @@ The develop branch is merged periodically into the master after confirming it's 
 -----
 
 ### Changelog
+- 2016-12-21
+    - Finished basic setup
+    - RC1
 - 2016-06-09
     - Project init
