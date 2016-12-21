@@ -2,23 +2,46 @@
 
 namespace Finwo\Mapper;
 
+use Finwo\Mapper\Driver\JsonDriver;
+use Finwo\Mapper\Driver\UrlEncoded;
+
 class Mapper
 {
     /**
-     * @param $originalData
-     * @param $newType
+     * @return DriverHandler
      */
-    public function map( $originalData, $newType )
+    protected static function getDriverHandler()
     {
-        // Firstly, make sure we're not dealing with strings
-        if (is_string($originalData)) {
-            $originalData = DriverHandler::deserialize($originalData);
+        static $dh = null;
+        if (is_null($dh)) {
+            // Build driver handler & register included drivers
+            $dh = new DriverHandler();
+            $dh->registerDriver('json', new JsonDriver())
+                ->registerDriver('urlencoded', new UrlEncoded());
         }
 
-        // Make sure we now have an array or object
-        if (!(is_array($originalData)||is_object($originalData))) {
-            // Hmm, what to do now
+        return $dh;
+    }
+
+    /**
+     * @param object|string $objectOrString
+     * @param object        $targetObject
+     *
+     * @return $this
+     */
+    public function map($objectOrString, $targetObject)
+    {
+        // Initialize json-mapper
+        static $mapper = null;
+        if (is_null($mapper)) {
+            $mapper = new \JsonMapper();
         }
 
+        // Make the data usable
+        $data = $this->getDriverHandler()->deserialize($objectOrString);
+
+        // Map & bail
+        $mapper->map($data, $targetObject);
+        return $this;
     }
 }
