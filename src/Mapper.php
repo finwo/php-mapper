@@ -29,7 +29,7 @@ class Mapper
      *
      * @return $this
      */
-    public function map($objectOrString, &$targetObject = array())
+    public function map($objectOrString, $targetObject = array())
     {
         // Initialize json-mapper
         static $mapper = null;
@@ -44,7 +44,7 @@ class Mapper
         // Map into target
         if (is_array($data)) {
             $class = is_object($targetObject) ? get_class($targetObject) : is_array($targetObject) ? null : "$targetObject";
-            $targetObject = $mapper->mapArray($data, array(), $class);
+            return $mapper->mapArray($data, array(), $class);
         } else {
             $mapper->map($data, $targetObject);
         }
