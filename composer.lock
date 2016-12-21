@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "215edf3bc206f334e9f99d14e9b00bd0",
-    "content-hash": "f8535af8ae04e55a5f79c0436591659a",
+    "hash": "7cdd42b8bcfe67bff9a0aa419ef94bfe",
+    "content-hash": "6de96ee06f67ad0788aa8f75fd0dc20a",
     "packages": [
         {
             "name": "finwo/property-accessor",
@@ -38,6 +38,45 @@
                 }
             ],
             "time": "2016-05-06 13:52:04"
+        },
+        {
+            "name": "netresearch/jsonmapper",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cweiske/jsonmapper.git",
+                "reference": "2130cc7152b31fb9f60a2d6e1f631981279d3957"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cweiske/jsonmapper/zipball/2130cc7152b31fb9f60a2d6e1f631981279d3957",
+                "reference": "2130cc7152b31fb9f60a2d6e1f631981279d3957",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.2.*",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JsonMapper": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Weiske",
+                    "email": "cweiske@cweiske.de",
+                    "homepage": "http://github.com/cweiske/jsonmapper/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Map nested JSON structures onto PHP classes",
+            "time": "2016-11-17 06:34:01"
         }
     ],
     "packages-dev": [
@@ -1150,7 +1189,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.3"
+        "php": ">=5.4"
     },
     "platform-dev": []
 }

@@ -2,7 +2,7 @@
 
 namespace Finwo\Mapper\Driver;
 
-class JSONDriver extends AbstractDriver
+class JsonDriver extends AbstractDriver implements DriverInterface
 {
     /**
      * {@inheritdoc}
@@ -45,6 +45,6 @@ class JSONDriver extends AbstractDriver
      */
     public function decode($testData)
     {
-        return json_decode($testData, true);
+        return json_decode($testData);
     }
 }

@@ -11,8 +11,9 @@
         "psr-4": { "Finwo\\Mapper\\": "src" }
     },
     "require": {
-        "php": ">=5.3",
-        "finwo/property-accessor": "^0.1.3"
+        "php": ">=5.4",
+        "finwo/property-accessor": "^0.1.3",
+        "netresearch/jsonmapper": "^1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
