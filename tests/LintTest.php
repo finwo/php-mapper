@@ -1,7 +1,6 @@
 <?php
 
-class LintTest extends \PHPUnit_Framework_TestCase
-{
+class LintTest extends \PHPUnit\Framework\TestCase {
     public function testSrc()
     {
         // Main entry
