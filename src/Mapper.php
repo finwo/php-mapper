@@ -24,8 +24,8 @@ class Mapper
     }
 
     /**
-     * @param object|string $objectOrString
-     * @param object|array  $targetObject
+     * @param object|array|string $objectOrString
+     * @param object|array        $targetObject
      *
      * @return $this
      */
