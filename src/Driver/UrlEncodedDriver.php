@@ -2,7 +2,7 @@
 
 namespace Finwo\Mapper\Driver;
 
-class UrlEncoded extends AbstractDriver implements DriverInterface
+class UrlEncodedDriver extends AbstractDriver implements DriverInterface
 {
     /**
      * {@inheritdoc}
