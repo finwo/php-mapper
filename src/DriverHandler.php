@@ -58,8 +58,8 @@ class DriverHandler
         }
 
         // Decode the data
-        if (isset($drivers[$encoding])) {
-            return $drivers[$encoding]->decode($input);
+        if (isset($this->drivers[$encoding])) {
+            return $this->drivers[$encoding]->decode($input);
         }
 
         // Or notify we've failed
@@ -87,8 +87,8 @@ class DriverHandler
         }
 
         // Decode the data
-        if (isset($drivers[$encoding])) {
-            return $drivers[$encoding]->encode($data);
+        if (isset($this->drivers[$encoding])) {
+            return $this->drivers[$encoding]->encode($data);
         }
 
         // Or notify we've failed
