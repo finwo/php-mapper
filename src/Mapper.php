@@ -3,7 +3,7 @@
 namespace Finwo\Mapper;
 
 use Finwo\Mapper\Driver\JsonDriver;
-use Finwo\Mapper\Driver\UrlEncoded;
+use Finwo\Mapper\Driver\UrlEncodedDriver;
 
 class Mapper
 {
@@ -17,7 +17,7 @@ class Mapper
             // Build driver handler & register included drivers
             $dh = new DriverHandler();
             $dh->registerDriver('json', new JsonDriver())
-                ->registerDriver('urlencoded', new UrlEncoded());
+                ->registerDriver('urlencoded', new UrlEncodedDriver());
         }
 
         return $dh;
